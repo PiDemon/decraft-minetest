@@ -41,7 +41,7 @@ local function decraft(pos)
 			end
 		end
 end
-minetest.register_node("unmake:table", {
+minetest.register_node("decraft:table", {
 		description = "Decrafting Workbench",
 		tiles = {"unmake_top.png", "unmake_top.png", "unmake_side.png", "unmake_side.png", "unmake_side.png", "unmake_side.png"},
 		groups = {oddly_breakable_by_hand = 1},
@@ -63,7 +63,7 @@ minetest.register_node("unmake:table", {
 		end
 })
 minetest.register_craft({
-		output = "unmake:table",
+		output = "decraft:table",
 		recipe = {
 			{"default:sword_steel", "default:pick_steel", "default:axe_steel"},
 			{"default:sandstone_block", "default:bronzeblock", "default:sandstone_block"},
