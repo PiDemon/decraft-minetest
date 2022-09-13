@@ -1,3 +1,5 @@
+local S = minetest.get_translator("decraft")
+
 --formspecs
 local function get_formspec_bench()
 	return "size[10,10]"..
@@ -8,7 +10,7 @@ local function get_formspec_bench()
 end
 local function get_formspec_working()
 	return "size[10,10]"..
-		"label[4,2;Decrafting in process...]"..
+		"label[4,2;" .. S("Decrafting in process...") .. "]" ..
 		"list[current_player;main;1,5;8,4;]"
 end
 local function contains(element)
@@ -42,7 +44,7 @@ local function decraft(pos)
 		end
 end
 minetest.register_node("decraft:table", {
-		description = "Decrafting Workbench",
+		description = S("Decrafting Workbench"),
 		tiles = {"unmake_top.png", "unmake_top.png", "unmake_side.png", "unmake_side.png", "unmake_side.png", "unmake_side.png"},
 		groups = {oddly_breakable_by_hand = 1},
 		on_construct = function(pos, node)
