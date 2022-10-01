@@ -37,7 +37,7 @@ local function decraft(pos)
 			end
 			if inv:is_empty("result") then
 				inv:set_list("result", realstuff) --set result
-				inv:remove_item("input", stack:get_name().." "..stack:get_count()) --remove input
+				inv:remove_item("input", stack:get_name().." "..ItemStack(stuff.output):get_count()) --remove input
 				meta:set_string("formspec", get_formspec_working())
 				timer:start(5)
 			end
